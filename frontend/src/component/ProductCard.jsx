@@ -1,4 +1,35 @@
-function ProductCard() {
+function ProductCard({ product }) {
+
+  return (
+
+    <div className="card p-3">
+
+      <img
+        src={product.image}
+        className="card-img-top"
+        alt=""
+      />
+
+      <div className="card-body">
+
+        <h5>{product.title}</h5>
+
+        <p>₹ {product.price}</p>
+
+        <button className="btn btn-dark">
+          Add To Cart
+        </button>
+
+      </div>
+
+    </div>
+  );
+}
+
+export default ProductCard;
+
+
+{/* function () {
   return (
     <div className="card p-3">
 
@@ -21,5 +52,6 @@ function ProductCard() {
     </div>
   )
 }
+  
 
-export default ProductCard
+export default  */}
